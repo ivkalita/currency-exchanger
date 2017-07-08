@@ -9,10 +9,19 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *inputField;
+@property (weak, nonatomic) IBOutlet UITextField *outputField;
 
 @end
 
 @implementation ViewController
+
+- (IBAction)inputEditingChanged:(id)sender {
+    float value = _inputField.text.floatValue;
+    value *= 60.5;
+    _outputField.text = [NSString stringWithFormat:@"%f", value];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
