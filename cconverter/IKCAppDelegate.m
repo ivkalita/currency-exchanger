@@ -6,13 +6,13 @@
 //  Copyright © 2017 Ivan Kalita. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "IKCAppDelegate.h"
 
-@interface AppDelegate ()
+@interface IKCAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation IKCAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

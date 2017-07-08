@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ExchangeController.h
 //  cconverter
 //
 //  Created by Ivan Kalita on 03.07.17.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface IKCExchangeController : UIViewController
 
 
 @end
