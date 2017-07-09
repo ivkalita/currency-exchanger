@@ -15,6 +15,11 @@
 		1D54AA2A1F0AD46600391F89 /* cconverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA291F0AD46600391F89 /* cconverterTests.m */; };
 		1D54AA351F0AD46600391F89 /* cconverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA341F0AD46600391F89 /* cconverterUITests.m */; };
 		1D54AA481F11351800391F89 /* IKCExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA471F11351800391F89 /* IKCExchangeController.m */; };
+		1D54AA501F113D3100391F89 /* IKCExchangeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA4F1F113D3100391F89 /* IKCExchangeViewModel.m */; };
+		1D54AA551F11425900391F89 /* IKCCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA521F11425900391F89 /* IKCCurrency.m */; };
+		1D54AA561F11425900391F89 /* IKCRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA541F11425900391F89 /* IKCRate.m */; };
+		1D54AA591F11F8CF00391F89 /* IKCRateProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA581F11F8CF00391F89 /* IKCRateProvider.m */; };
+		CEC895B2B03DF7A4F9621751 /* libPods-cconverter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D4C28DF603AB361AB1DB01 /* libPods-cconverter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08D4C28DF603AB361AB1DB01 /* libPods-cconverter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cconverter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D54AA0C1F0AD46600391F89 /* cconverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cconverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D54AA101F0AD46600391F89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D54AA121F0AD46600391F89 /* IKCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKCAppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +57,16 @@
 		1D54AA361F0AD46600391F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D54AA461F11351800391F89 /* IKCExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCExchangeController.h; path = Controllers/IKCExchangeController.h; sourceTree = "<group>"; };
 		1D54AA471F11351800391F89 /* IKCExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCExchangeController.m; path = Controllers/IKCExchangeController.m; sourceTree = "<group>"; };
+		1D54AA4E1F113D3100391F89 /* IKCExchangeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCExchangeViewModel.h; path = cconverter/ViewModels/IKCExchangeViewModel.h; sourceTree = "<group>"; };
+		1D54AA4F1F113D3100391F89 /* IKCExchangeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCExchangeViewModel.m; path = cconverter/ViewModels/IKCExchangeViewModel.m; sourceTree = "<group>"; };
+		1D54AA511F11425900391F89 /* IKCCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCCurrency.h; path = cconverter/Models/IKCCurrency.h; sourceTree = "<group>"; };
+		1D54AA521F11425900391F89 /* IKCCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCCurrency.m; path = cconverter/Models/IKCCurrency.m; sourceTree = "<group>"; };
+		1D54AA531F11425900391F89 /* IKCRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCRate.h; path = cconverter/Models/IKCRate.h; sourceTree = "<group>"; };
+		1D54AA541F11425900391F89 /* IKCRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCRate.m; path = cconverter/Models/IKCRate.m; sourceTree = "<group>"; };
+		1D54AA571F11F8CF00391F89 /* IKCRateProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCRateProvider.h; path = cconverter/Services/IKCRateProvider.h; sourceTree = "<group>"; };
+		1D54AA581F11F8CF00391F89 /* IKCRateProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCRateProvider.m; path = cconverter/Services/IKCRateProvider.m; sourceTree = "<group>"; };
+		8922C1234A2BD8634A1D6958 /* Pods-cconverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cconverter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cconverter/Pods-cconverter.debug.xcconfig"; sourceTree = "<group>"; };
+		BA57DC3010ECF162E1AAC2BB /* Pods-cconverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cconverter.release.xcconfig"; path = "Pods/Target Support Files/Pods-cconverter/Pods-cconverter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC895B2B03DF7A4F9621751 /* libPods-cconverter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08A841B6B5B54B711CCEB3FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08D4C28DF603AB361AB1DB01 /* libPods-cconverter.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1D54AA031F0AD46600391F89 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				1D54AA281F0AD46600391F89 /* cconverterTests */,
 				1D54AA331F0AD46600391F89 /* cconverterUITests */,
 				1D54AA0D1F0AD46600391F89 /* Products */,
+				8B46A3E7C8C4F1B2907CADE5 /* Pods */,
+				08A841B6B5B54B711CCEB3FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +173,8 @@
 		1D54AA491F11363000391F89 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1D54AA571F11F8CF00391F89 /* IKCRateProvider.h */,
+				1D54AA581F11F8CF00391F89 /* IKCRateProvider.m */,
 			);
 			name = Services;
 			path = ..;
@@ -154,6 +183,10 @@
 		1D54AA4C1F11365500391F89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1D54AA511F11425900391F89 /* IKCCurrency.h */,
+				1D54AA521F11425900391F89 /* IKCCurrency.m */,
+				1D54AA531F11425900391F89 /* IKCRate.h */,
+				1D54AA541F11425900391F89 /* IKCRate.m */,
 			);
 			name = Models;
 			path = ..;
@@ -162,9 +195,20 @@
 		1D54AA4D1F11365C00391F89 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1D54AA4E1F113D3100391F89 /* IKCExchangeViewModel.h */,
+				1D54AA4F1F113D3100391F89 /* IKCExchangeViewModel.m */,
 			);
 			name = ViewModels;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		8B46A3E7C8C4F1B2907CADE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8922C1234A2BD8634A1D6958 /* Pods-cconverter.debug.xcconfig */,
+				BA57DC3010ECF162E1AAC2BB /* Pods-cconverter.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D54AA391F0AD46600391F89 /* Build configuration list for PBXNativeTarget "cconverter" */;
 			buildPhases = (
+				12E452C0A987125055EE0207 /* [CP] Check Pods Manifest.lock */,
 				1D54AA081F0AD46600391F89 /* Sources */,
 				1D54AA091F0AD46600391F89 /* Frameworks */,
 				1D54AA0A1F0AD46600391F89 /* Resources */,
+				180CF41E06705C0DA6878380 /* [CP] Embed Pods Frameworks */,
+				B7301A431469405B4B6051DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,14 +344,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12E452C0A987125055EE0207 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		180CF41E06705C0DA6878380 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cconverter/Pods-cconverter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7301A431469405B4B6051DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cconverter/Pods-cconverter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D54AA081F0AD46600391F89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1D54AA141F0AD46600391F89 /* IKCAppDelegate.m in Sources */,
+				1D54AA591F11F8CF00391F89 /* IKCRateProvider.m in Sources */,
+				1D54AA561F11425900391F89 /* IKCRate.m in Sources */,
 				1D54AA481F11351800391F89 /* IKCExchangeController.m in Sources */,
 				1D54AA111F0AD46600391F89 /* main.m in Sources */,
+				1D54AA501F113D3100391F89 /* IKCExchangeViewModel.m in Sources */,
+				1D54AA551F11425900391F89 /* IKCCurrency.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +552,7 @@
 		};
 		1D54AA3A1F0AD46600391F89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8922C1234A2BD8634A1D6958 /* Pods-cconverter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z2PHG96DRQ;
@@ -467,6 +567,7 @@
 		};
 		1D54AA3B1F0AD46600391F89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA57DC3010ECF162E1AAC2BB /* Pods-cconverter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z2PHG96DRQ;
@@ -544,6 +645,7 @@
 				1D54AA3B1F0AD46600391F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D54AA3C1F0AD46600391F89 /* Build configuration list for PBXNativeTarget "cconverterTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +654,7 @@
 				1D54AA3E1F0AD46600391F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D54AA3F1F0AD46600391F89 /* Build configuration list for PBXNativeTarget "cconverterUITests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +663,7 @@
 				1D54AA411F0AD46600391F89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

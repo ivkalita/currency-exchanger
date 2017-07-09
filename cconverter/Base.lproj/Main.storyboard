@@ -53,7 +53,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="55"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="inputEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="e6S-CS-9t6"/>
                                         </connections>
@@ -66,14 +66,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Albania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXU-fU-kI4" userLabel="Country Label">
-                                        <rect key="frame" x="90" y="10" width="60" height="20"/>
+                                        <rect key="frame" x="90" y="10" width="275" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Albania Lek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEL-cp-V2H" userLabel="Currency Label">
-                                        <rect key="frame" x="90" y="30" width="90" height="20"/>
+                                        <rect key="frame" x="90" y="30" width="275" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.46677964925765991" green="0.83301419019699097" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,12 +85,12 @@
                                 <rect key="frame" x="0.0" y="216" width="375" height="123"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoB-C4-f8o" userLabel="Input Field">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoB-C4-f8o" userLabel="Input Field">
                                         <rect key="frame" x="15" y="50" width="350" height="80"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="55"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="inputEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="AKa-Fi-tZR"/>
                                         </connections>
@@ -103,14 +103,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Albania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1l-oq-idm" userLabel="Country Label">
-                                        <rect key="frame" x="90" y="10" width="60" height="20"/>
+                                        <rect key="frame" x="90" y="10" width="277" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Albania Lek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6R-hk-RBZ" userLabel="Currency Label">
-                                        <rect key="frame" x="90" y="30" width="90" height="20"/>
+                                        <rect key="frame" x="90" y="30" width="275" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.46677964929999999" green="0.8330141902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,6 +125,12 @@
                     <connections>
                         <outlet property="inputField" destination="Akn-B2-ZNx" id="jhZ-CV-8W8"/>
                         <outlet property="outputField" destination="FoB-C4-f8o" id="PiG-h5-YJg"/>
+                        <outlet property="sourceCurrencyCountryLabel" destination="XXU-fU-kI4" id="vAq-nk-rIl"/>
+                        <outlet property="sourceCurrencyFullNameLabel" destination="aEL-cp-V2H" id="Xgd-lv-ndc"/>
+                        <outlet property="sourceCurrencyShortNameLabel" destination="CjR-SS-KID" id="4ma-1F-jB1"/>
+                        <outlet property="targetCurrencyCountryLabel" destination="I1l-oq-idm" id="ygW-Iz-zF7"/>
+                        <outlet property="targetCurrencyFullNameLabel" destination="G6R-hk-RBZ" id="5f4-ll-H9h"/>
+                        <outlet property="targetCurrencyShortNameLabel" destination="lDd-Rn-xXK" id="7Zb-wD-eaf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
