@@ -44,7 +44,7 @@
                                     </label>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ST-Be-xmp" userLabel="From Currency View">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ST-Be-xmp" userLabel="Source Currency View">
                                 <rect key="frame" x="-1" y="64" width="375" height="123"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -58,27 +58,31 @@
                                             <action selector="inputEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="e6S-CS-9t6"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ALL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjR-SS-KID" userLabel="Short Currency Label">
-                                        <rect key="frame" x="15" y="0.0" width="70" height="65"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
-                                        <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Albania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXU-fU-kI4" userLabel="Country Label">
-                                        <rect key="frame" x="90" y="10" width="275" height="20"/>
+                                        <rect key="frame" x="100" y="10" width="275" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Albania Lek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEL-cp-V2H" userLabel="Currency Label">
-                                        <rect key="frame" x="90" y="30" width="275" height="20"/>
+                                        <rect key="frame" x="100" y="30" width="275" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.46677964925765991" green="0.83301419019699097" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azF-uZ-4Ok" userLabel="Short Currency Name Button">
+                                        <rect key="frame" x="15" y="0.0" width="80" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="ALL">
+                                            <color key="titleColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSourceCurrencyTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTb-np-K9R"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Son-Hc-57X" userLabel="To Currency View">
@@ -95,27 +99,31 @@
                                             <action selector="inputEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="AKa-Fi-tZR"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ALL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDd-Rn-xXK" userLabel="Short Currency Label">
-                                        <rect key="frame" x="15" y="0.0" width="70" height="65"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
-                                        <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Albania" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1l-oq-idm" userLabel="Country Label">
-                                        <rect key="frame" x="90" y="10" width="277" height="20"/>
+                                        <rect key="frame" x="100" y="10" width="277" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Albania Lek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6R-hk-RBZ" userLabel="Currency Label">
-                                        <rect key="frame" x="90" y="30" width="275" height="20"/>
+                                        <rect key="frame" x="100" y="30" width="275" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.46677964929999999" green="0.8330141902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wz0-Gc-rB1" userLabel="Short Currency Name Button">
+                                        <rect key="frame" x="15" y="0.0" width="80" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="ALL">
+                                            <color key="titleColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTargetCurrencyTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsD-hm-wbQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                         </subviews>
@@ -127,20 +135,74 @@
                         <outlet property="outputField" destination="FoB-C4-f8o" id="PiG-h5-YJg"/>
                         <outlet property="sourceCurrencyCountryLabel" destination="XXU-fU-kI4" id="vAq-nk-rIl"/>
                         <outlet property="sourceCurrencyFullNameLabel" destination="aEL-cp-V2H" id="Xgd-lv-ndc"/>
-                        <outlet property="sourceCurrencyShortNameLabel" destination="CjR-SS-KID" id="4ma-1F-jB1"/>
+                        <outlet property="sourceCurrencyShortNameButton" destination="azF-uZ-4Ok" id="uL5-tJ-S3H"/>
                         <outlet property="targetCurrencyCountryLabel" destination="I1l-oq-idm" id="ygW-Iz-zF7"/>
                         <outlet property="targetCurrencyFullNameLabel" destination="G6R-hk-RBZ" id="5f4-ll-H9h"/>
-                        <outlet property="targetCurrencyShortNameLabel" destination="lDd-Rn-xXK" id="7Zb-wD-eaf"/>
+                        <outlet property="targetCurrencyShortNameButton" destination="wz0-Gc-rB1" id="3Bf-Ml-kgJ"/>
+                        <segue destination="aQB-nd-mke" kind="show" identifier="ShowCurrencyList" id="P9x-Oe-cQD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="129.98500749625188"/>
         </scene>
+        <!--Currency List Controller-->
+        <scene sceneID="ssK-uB-4w5">
+            <objects>
+                <tableViewController id="aQB-nd-mke" customClass="IKCCurrencyListController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P2h-Wf-CZQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.02489836887" green="0.61173683400000001" blue="0.84479516740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.1521283984" green="0.61965543030000003" blue="0.84854811429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.22950881719999999" green="0.73387306929999996" blue="0.95476180320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.02489836887" green="0.61173683400000001" blue="0.84479516740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CurrencyListTableCell" id="MAb-fC-ZnI" customClass="IKCCurrencyListCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MAb-fC-ZnI" id="7Ei-zA-Ghx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boX-SR-aXd" userLabel="Currency short name">
+                                            <rect key="frame" x="15" y="0.0" width="80" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
+                                            <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58O-dt-Ci4" userLabel="Currency country name">
+                                            <rect key="frame" x="95" y="11" width="235" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" red="0.46677964929999999" green="0.8330141902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.02489836887" green="0.61173683400000001" blue="0.84479516740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                                <color key="tintColor" red="0.46677964929999999" green="0.8330141902" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="countryNameLabel" destination="58O-dt-Ci4" id="zvr-Eq-eEl"/>
+                                    <outlet property="shortNameLabel" destination="boX-SR-aXd" id="KOJ-jE-hjy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aQB-nd-mke" id="uDl-JN-NAd"/>
+                            <outlet property="delegate" destination="aQB-nd-mke" id="n71-QZ-Vlg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evp-AN-T71" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2109.5999999999999" y="129.98500749625188"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sf3-nD-Afg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IHV-xf-REI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IHV-xf-REI" customClass="IKCNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PTp-xu-f0H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

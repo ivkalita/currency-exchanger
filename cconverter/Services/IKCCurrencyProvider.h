@@ -4,6 +4,8 @@
 
 @interface IKCCurrencyProvider : NSObject
 
-@property(nonatomic, readonly) NSArray<IKCCurrency*> *currencies;
+@property (nonatomic, readonly) NSArray<IKCCurrency*> *currencies;
+@property (nonatomic) IKCCurrency *source;
+@property (nonatomic) IKCCurrency *target;
 
 @end

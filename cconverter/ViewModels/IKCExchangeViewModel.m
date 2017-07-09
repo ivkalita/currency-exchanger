@@ -1,8 +1,6 @@
 #import "ReactiveObjC.h"
 
 #import "IKCExchangeViewModel.h"
-#import "IKCCurrency.h"
-#import "IKCRate.h"
 #import "IKCRateProvider.h"
 #import "IKCCurrencyProvider.h"
 
@@ -36,7 +34,12 @@
     [self setRateProvider:rateProvider];
     [self setCurrencyProvider:currencyProvider];
 
-    [self setRate:[self.rateProvider rateFrom:currencyProvider.currencies[0] to:currencyProvider.currencies[1]]];
+    [RACObserve(_currencyProvider, source) subscribeNext:^(IKCCurrency *currency) {
+        [self updateRate];
+    }];
+    [RACObserve(_currencyProvider, target) subscribeNext:^(IKCCurrency *currency) {
+        [self updateRate];
+    }];
     [RACObserve(self, rate) subscribeNext:^(IKCRate *rate) {
         [self setAmount:self.amount];
     }];
@@ -46,6 +49,7 @@
     return self;
 }
 
+
 - (void)setAmount:(NSNumber *)amount {
     _amount = amount;
     NSNumber *newConverted = _rate == nil
@@ -53,6 +57,12 @@
         : @(_rate.rate.doubleValue * _amount.doubleValue);
     [self setConverted:newConverted];
 }
+
+
+- (void)updateRate {
+    [self setRate:[self.rateProvider rateFrom:self.currencyProvider.source to:self.currencyProvider.target]];
+}
+
 
 - (void)setRate:(IKCRate *)rate {
     _rate = rate;

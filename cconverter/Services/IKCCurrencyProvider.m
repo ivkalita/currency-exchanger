@@ -15,10 +15,23 @@
         return self;
     }
 
-    IKCCurrency *rub = [[IKCCurrency alloc] initWithIdentifier:1 shortName:@"USD" fullName:@"USA Dollar" country:@"USA"];
-    IKCCurrency *usd = [[IKCCurrency alloc] initWithIdentifier:2 shortName:@"RUB" fullName:@"Russia Ruble" country:@"Russia"];
+    NSArray *rawCurrencies = @[
+                               @[@"USD", @"USA Dollar", @"USA"],
+                               @[@"RUB", @"Russian Ruble", @"Russian Federation"],
+                               @[@"AUD", @"Australian Dollar", @"Australia"],
+                               @[@"BGN", @"Bulgarian Lev", @"Bulgaria"],
+                               @[@"EUR", @"Euro", @"Euro Member Countries"],
+                               @[@"GBP", @"British Pound", @"United Kingdom"]
+                            ];
+    NSMutableArray *currencies = [NSMutableArray new];
+    [rawCurrencies enumerateObjectsUsingBlock:^(NSArray *value, NSUInteger idx, BOOL * _Nonnull stop) {
+        IKCCurrency *currency = [[IKCCurrency alloc] initWithIdentifier:idx shortName:value[0] fullName:value[1] country:value[2]];
+        [currencies addObject:currency];
+    }];
 
-    [self setCurrencies:[[NSArray alloc] initWithObjects:rub, usd, nil]];
+    [self setCurrencies:currencies];
+    [self setSource:self.currencies[0]];
+    [self setTarget:self.currencies[1]];
 
     return self;
 }

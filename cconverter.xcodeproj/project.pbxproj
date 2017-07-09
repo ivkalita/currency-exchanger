@@ -14,13 +14,19 @@
 		1D54AA1F1F0AD46600391F89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D54AA1D1F0AD46600391F89 /* LaunchScreen.storyboard */; };
 		1D54AA2A1F0AD46600391F89 /* cconverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA291F0AD46600391F89 /* cconverterTests.m */; };
 		1D54AA351F0AD46600391F89 /* cconverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA341F0AD46600391F89 /* cconverterUITests.m */; };
-		1D54AA481F11351800391F89 /* IKCExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA471F11351800391F89 /* IKCExchangeController.m */; };
 		1D54AA501F113D3100391F89 /* IKCExchangeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA4F1F113D3100391F89 /* IKCExchangeViewModel.m */; };
 		1D54AA551F11425900391F89 /* IKCCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA521F11425900391F89 /* IKCCurrency.m */; };
 		1D54AA561F11425900391F89 /* IKCRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA541F11425900391F89 /* IKCRate.m */; };
 		1D54AA591F11F8CF00391F89 /* IKCRateProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA581F11F8CF00391F89 /* IKCRateProvider.m */; };
 		1D54AA5C1F12220800391F89 /* IKCCurrencyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA5B1F12220800391F89 /* IKCCurrencyProvider.m */; };
 		1D54AA601F1231C100391F89 /* IKCAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA5F1F1231C100391F89 /* IKCAssembly.m */; };
+		1D54AA6A1F1265ED00391F89 /* IKCCurrencyListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA691F1265ED00391F89 /* IKCCurrencyListController.m */; };
+		1D54AA6D1F1265FA00391F89 /* IKCExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA6C1F1265FA00391F89 /* IKCExchangeController.m */; };
+		1D54AA711F12662700391F89 /* IKCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA701F12662700391F89 /* IKCNavigationController.m */; };
+		1D54AA741F126CAE00391F89 /* IKCCurrencyListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA731F126CAE00391F89 /* IKCCurrencyListViewModel.m */; };
+		1D54AA771F12720300391F89 /* IKCCurrencyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA761F12720300391F89 /* IKCCurrencyListCell.m */; };
+		1D54AA7A1F1276E800391F89 /* IKCCurrencyListCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA791F1276E800391F89 /* IKCCurrencyListCellViewModel.m */; };
+		1D604BC41F128AB700680A6F /* IKCCurrencyPurpose.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D604BC31F128AB700680A6F /* IKCCurrencyPurpose.m */; };
 		CEC895B2B03DF7A4F9621751 /* libPods-cconverter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D4C28DF603AB361AB1DB01 /* libPods-cconverter.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +63,6 @@
 		1D54AA301F0AD46600391F89 /* cconverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cconverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D54AA341F0AD46600391F89 /* cconverterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cconverterUITests.m; sourceTree = "<group>"; };
 		1D54AA361F0AD46600391F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D54AA461F11351800391F89 /* IKCExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCExchangeController.h; path = Controllers/IKCExchangeController.h; sourceTree = "<group>"; };
-		1D54AA471F11351800391F89 /* IKCExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCExchangeController.m; path = Controllers/IKCExchangeController.m; sourceTree = "<group>"; };
 		1D54AA4E1F113D3100391F89 /* IKCExchangeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCExchangeViewModel.h; path = cconverter/ViewModels/IKCExchangeViewModel.h; sourceTree = "<group>"; };
 		1D54AA4F1F113D3100391F89 /* IKCExchangeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCExchangeViewModel.m; path = cconverter/ViewModels/IKCExchangeViewModel.m; sourceTree = "<group>"; };
 		1D54AA511F11425900391F89 /* IKCCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCCurrency.h; path = cconverter/Models/IKCCurrency.h; sourceTree = "<group>"; };
@@ -71,6 +75,20 @@
 		1D54AA5B1F12220800391F89 /* IKCCurrencyProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCCurrencyProvider.m; path = cconverter/Services/IKCCurrencyProvider.m; sourceTree = "<group>"; };
 		1D54AA5E1F1231C100391F89 /* IKCAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCAssembly.h; path = DI/IKCAssembly.h; sourceTree = "<group>"; };
 		1D54AA5F1F1231C100391F89 /* IKCAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCAssembly.m; path = DI/IKCAssembly.m; sourceTree = "<group>"; };
+		1D54AA681F1265ED00391F89 /* IKCCurrencyListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCCurrencyListController.h; path = Controllers/CurrencyList/IKCCurrencyListController.h; sourceTree = "<group>"; };
+		1D54AA691F1265ED00391F89 /* IKCCurrencyListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCCurrencyListController.m; path = Controllers/CurrencyList/IKCCurrencyListController.m; sourceTree = "<group>"; };
+		1D54AA6B1F1265FA00391F89 /* IKCExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCExchangeController.h; path = Controllers/Exchange/IKCExchangeController.h; sourceTree = "<group>"; };
+		1D54AA6C1F1265FA00391F89 /* IKCExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCExchangeController.m; path = Controllers/Exchange/IKCExchangeController.m; sourceTree = "<group>"; };
+		1D54AA6F1F12662700391F89 /* IKCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCNavigationController.h; path = Controllers/Navigation/IKCNavigationController.h; sourceTree = "<group>"; };
+		1D54AA701F12662700391F89 /* IKCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCNavigationController.m; path = Controllers/Navigation/IKCNavigationController.m; sourceTree = "<group>"; };
+		1D54AA721F126CAE00391F89 /* IKCCurrencyListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCCurrencyListViewModel.h; path = cconverter/ViewModels/IKCCurrencyListViewModel.h; sourceTree = "<group>"; };
+		1D54AA731F126CAE00391F89 /* IKCCurrencyListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCCurrencyListViewModel.m; path = cconverter/ViewModels/IKCCurrencyListViewModel.m; sourceTree = "<group>"; };
+		1D54AA751F12720300391F89 /* IKCCurrencyListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCCurrencyListCell.h; path = Controllers/CurrencyList/IKCCurrencyListCell.h; sourceTree = "<group>"; };
+		1D54AA761F12720300391F89 /* IKCCurrencyListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCCurrencyListCell.m; path = Controllers/CurrencyList/IKCCurrencyListCell.m; sourceTree = "<group>"; };
+		1D54AA781F1276E800391F89 /* IKCCurrencyListCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCCurrencyListCellViewModel.h; path = cconverter/ViewModels/IKCCurrencyListCellViewModel.h; sourceTree = "<group>"; };
+		1D54AA791F1276E800391F89 /* IKCCurrencyListCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCCurrencyListCellViewModel.m; path = cconverter/ViewModels/IKCCurrencyListCellViewModel.m; sourceTree = "<group>"; };
+		1D604BC21F128AB700680A6F /* IKCCurrencyPurpose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCCurrencyPurpose.h; path = cconverter/Models/IKCCurrencyPurpose.h; sourceTree = "<group>"; };
+		1D604BC31F128AB700680A6F /* IKCCurrencyPurpose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCCurrencyPurpose.m; path = cconverter/Models/IKCCurrencyPurpose.m; sourceTree = "<group>"; };
 		8922C1234A2BD8634A1D6958 /* Pods-cconverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cconverter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cconverter/Pods-cconverter.debug.xcconfig"; sourceTree = "<group>"; };
 		BA57DC3010ECF162E1AAC2BB /* Pods-cconverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cconverter.release.xcconfig"; path = "Pods/Target Support Files/Pods-cconverter/Pods-cconverter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,8 +189,9 @@
 		1D54AA451F11350900391F89 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1D54AA461F11351800391F89 /* IKCExchangeController.h */,
-				1D54AA471F11351800391F89 /* IKCExchangeController.m */,
+				1D54AA6E1F12660D00391F89 /* Navigation */,
+				1D54AA671F1260AF00391F89 /* CurrencyList */,
+				1D54AA661F1260A200391F89 /* Exchange */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +211,8 @@
 		1D54AA4C1F11365500391F89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1D604BC21F128AB700680A6F /* IKCCurrencyPurpose.h */,
+				1D604BC31F128AB700680A6F /* IKCCurrencyPurpose.m */,
 				1D54AA511F11425900391F89 /* IKCCurrency.h */,
 				1D54AA521F11425900391F89 /* IKCCurrency.m */,
 				1D54AA531F11425900391F89 /* IKCRate.h */,
@@ -204,6 +225,10 @@
 		1D54AA4D1F11365C00391F89 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1D54AA781F1276E800391F89 /* IKCCurrencyListCellViewModel.h */,
+				1D54AA791F1276E800391F89 /* IKCCurrencyListCellViewModel.m */,
+				1D54AA721F126CAE00391F89 /* IKCCurrencyListViewModel.h */,
+				1D54AA731F126CAE00391F89 /* IKCCurrencyListViewModel.m */,
 				1D54AA4E1F113D3100391F89 /* IKCExchangeViewModel.h */,
 				1D54AA4F1F113D3100391F89 /* IKCExchangeViewModel.m */,
 			);
@@ -218,6 +243,35 @@
 				1D54AA5F1F1231C100391F89 /* IKCAssembly.m */,
 			);
 			name = DI;
+			sourceTree = "<group>";
+		};
+		1D54AA661F1260A200391F89 /* Exchange */ = {
+			isa = PBXGroup;
+			children = (
+				1D54AA6B1F1265FA00391F89 /* IKCExchangeController.h */,
+				1D54AA6C1F1265FA00391F89 /* IKCExchangeController.m */,
+			);
+			name = Exchange;
+			sourceTree = "<group>";
+		};
+		1D54AA671F1260AF00391F89 /* CurrencyList */ = {
+			isa = PBXGroup;
+			children = (
+				1D54AA751F12720300391F89 /* IKCCurrencyListCell.h */,
+				1D54AA761F12720300391F89 /* IKCCurrencyListCell.m */,
+				1D54AA681F1265ED00391F89 /* IKCCurrencyListController.h */,
+				1D54AA691F1265ED00391F89 /* IKCCurrencyListController.m */,
+			);
+			name = CurrencyList;
+			sourceTree = "<group>";
+		};
+		1D54AA6E1F12660D00391F89 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1D54AA6F1F12662700391F89 /* IKCNavigationController.h */,
+				1D54AA701F12662700391F89 /* IKCNavigationController.m */,
+			);
+			name = Navigation;
 			sourceTree = "<group>";
 		};
 		8B46A3E7C8C4F1B2907CADE5 /* Pods */ = {
@@ -416,14 +470,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D54AA141F0AD46600391F89 /* IKCAppDelegate.m in Sources */,
+				1D54AA6A1F1265ED00391F89 /* IKCCurrencyListController.m in Sources */,
 				1D54AA601F1231C100391F89 /* IKCAssembly.m in Sources */,
+				1D54AA7A1F1276E800391F89 /* IKCCurrencyListCellViewModel.m in Sources */,
 				1D54AA591F11F8CF00391F89 /* IKCRateProvider.m in Sources */,
+				1D54AA6D1F1265FA00391F89 /* IKCExchangeController.m in Sources */,
+				1D54AA711F12662700391F89 /* IKCNavigationController.m in Sources */,
+				1D54AA771F12720300391F89 /* IKCCurrencyListCell.m in Sources */,
 				1D54AA561F11425900391F89 /* IKCRate.m in Sources */,
-				1D54AA481F11351800391F89 /* IKCExchangeController.m in Sources */,
 				1D54AA111F0AD46600391F89 /* main.m in Sources */,
 				1D54AA5C1F12220800391F89 /* IKCCurrencyProvider.m in Sources */,
+				1D54AA741F126CAE00391F89 /* IKCCurrencyListViewModel.m in Sources */,
 				1D54AA501F113D3100391F89 /* IKCExchangeViewModel.m in Sources */,
 				1D54AA551F11425900391F89 /* IKCCurrency.m in Sources */,
+				1D604BC41F128AB700680A6F /* IKCCurrencyPurpose.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

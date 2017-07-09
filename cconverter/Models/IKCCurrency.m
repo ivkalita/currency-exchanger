@@ -2,7 +2,7 @@
 
 @implementation IKCCurrency
 
-- (id)initWithIdentifier:(int)identifier shortName:(NSString *)shortName fullName:(NSString *)fullName country:(NSString *)country {
+- (id)initWithIdentifier:(NSInteger)identifier shortName:(NSString *)shortName fullName:(NSString *)fullName country:(NSString *)country {
     self = [super init];
 
     if (self == nil) {
