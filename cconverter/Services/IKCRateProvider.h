@@ -5,6 +5,6 @@
 
 @interface IKCRateProvider : NSObject
 
-- (IKCRate *)rateFrom:(IKCCurrency *)from to:(IKCCurrency *)to;
+- (IKCRate *)rateFrom:(IKCCurrency *)source to:(IKCCurrency *)target;
 
 @end

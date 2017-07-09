@@ -1,7 +1,5 @@
 #import <Foundation/Foundation.h>
 
-#import "IKCRate.h"
-
 @interface IKCExchangeViewModel : NSObject
 
 @property(nonatomic) NSNumber *amount;
@@ -14,7 +12,5 @@
 @property(nonatomic, readonly) NSString *targetCurrencyShortName;
 @property(nonatomic, readonly) NSString *targetCurrencyFullName;
 @property(nonatomic, readonly) NSString *targetCurrencyCountry;
-
-- (id)init;
 
 @end

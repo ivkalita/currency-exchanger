@@ -6,10 +6,12 @@
 //  Copyright © 2017 Ivan Kalita. All rights reserved.
 //
 
-#import "IKCExchangeController.h"
-
-#import "IKCExchangeViewModel.h"
 #import "ReactiveObjC.h"
+
+#import "IKCExchangeController.h"
+#import "IKCExchangeViewModel.h"
+#import "IKCAssembly.h"
+#import "IKCAppDelegate.h"
 
 @interface IKCExchangeController ()
 
@@ -37,7 +39,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _viewModel = [[IKCExchangeViewModel alloc] init];
 
     [RACObserve(_viewModel, converted) subscribeNext:^(NSNumber *value) {
         _outputField.text = value.stringValue;

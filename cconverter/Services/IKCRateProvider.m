@@ -2,8 +2,8 @@
 
 @implementation IKCRateProvider
 
-- (IKCRate *)rateFrom:(IKCCurrency *)from to:(IKCCurrency *)to {
-    return [[IKCRate alloc] initWithSource:from target:to rate:@60.5];
+- (IKCRate *)rateFrom:(IKCCurrency *)source to:(IKCCurrency *)target {
+    return [[IKCRate alloc] initWithSource:source target:target rate:@60.5];
 }
 
 @end

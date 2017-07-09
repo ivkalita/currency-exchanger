@@ -2,12 +2,15 @@
 
 #import "IKCExchangeViewModel.h"
 #import "IKCCurrency.h"
+#import "IKCRate.h"
 #import "IKCRateProvider.h"
+#import "IKCCurrencyProvider.h"
 
 @interface IKCExchangeViewModel ()
 
 @property(nonatomic) IKCRate *rate;
 @property(nonatomic) IKCRateProvider *rateProvider;
+@property(nonatomic) IKCCurrencyProvider *currencyProvider;
 
 @property(nonatomic) NSNumber *converted;
 
@@ -19,25 +22,26 @@
 @property(nonatomic) NSString *targetCurrencyFullName;
 @property(nonatomic) NSString *targetCurrencyCountry;
 
-
 @end
 
 @implementation IKCExchangeViewModel
 
-- (id)init {
+- (id)initWithRateProvider:(IKCRateProvider *)rateProvider currencyProvider:(IKCCurrencyProvider *)currencyProvider {
     self = [super init];
 
     if (self == nil) {
         return self;
     }
 
+    [self setRateProvider:rateProvider];
+    [self setCurrencyProvider:currencyProvider];
+
+    [self setRate:[self.rateProvider rateFrom:currencyProvider.currencies[0] to:currencyProvider.currencies[1]]];
+    [RACObserve(self, rate) subscribeNext:^(IKCRate *rate) {
+        [self setAmount:self.amount];
+    }];
+
     [self setAmount:@0];
-
-    IKCCurrency *source = [[IKCCurrency alloc] initWithIdentifier:1 shortName:@"USD" fullName:@"United States of America Dollar" country:@"United States of America"];
-    IKCCurrency *target = [[IKCCurrency alloc] initWithIdentifier:2 shortName:@"RUR" fullName:@"Russian Ruble" country:@"Russian Federation"];
-
-    [self setRateProvider:[[IKCRateProvider alloc] init]];
-    [self setRate:[self.rateProvider rateFrom:source to:target]];
 
     return self;
 }

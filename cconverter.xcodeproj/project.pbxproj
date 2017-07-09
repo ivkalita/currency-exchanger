@@ -19,6 +19,8 @@
 		1D54AA551F11425900391F89 /* IKCCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA521F11425900391F89 /* IKCCurrency.m */; };
 		1D54AA561F11425900391F89 /* IKCRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA541F11425900391F89 /* IKCRate.m */; };
 		1D54AA591F11F8CF00391F89 /* IKCRateProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA581F11F8CF00391F89 /* IKCRateProvider.m */; };
+		1D54AA5C1F12220800391F89 /* IKCCurrencyProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA5B1F12220800391F89 /* IKCCurrencyProvider.m */; };
+		1D54AA601F1231C100391F89 /* IKCAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54AA5F1F1231C100391F89 /* IKCAssembly.m */; };
 		CEC895B2B03DF7A4F9621751 /* libPods-cconverter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D4C28DF603AB361AB1DB01 /* libPods-cconverter.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,10 @@
 		1D54AA541F11425900391F89 /* IKCRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCRate.m; path = cconverter/Models/IKCRate.m; sourceTree = "<group>"; };
 		1D54AA571F11F8CF00391F89 /* IKCRateProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCRateProvider.h; path = cconverter/Services/IKCRateProvider.h; sourceTree = "<group>"; };
 		1D54AA581F11F8CF00391F89 /* IKCRateProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCRateProvider.m; path = cconverter/Services/IKCRateProvider.m; sourceTree = "<group>"; };
+		1D54AA5A1F12220800391F89 /* IKCCurrencyProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCCurrencyProvider.h; path = cconverter/Services/IKCCurrencyProvider.h; sourceTree = "<group>"; };
+		1D54AA5B1F12220800391F89 /* IKCCurrencyProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCCurrencyProvider.m; path = cconverter/Services/IKCCurrencyProvider.m; sourceTree = "<group>"; };
+		1D54AA5E1F1231C100391F89 /* IKCAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKCAssembly.h; path = DI/IKCAssembly.h; sourceTree = "<group>"; };
+		1D54AA5F1F1231C100391F89 /* IKCAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKCAssembly.m; path = DI/IKCAssembly.m; sourceTree = "<group>"; };
 		8922C1234A2BD8634A1D6958 /* Pods-cconverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cconverter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cconverter/Pods-cconverter.debug.xcconfig"; sourceTree = "<group>"; };
 		BA57DC3010ECF162E1AAC2BB /* Pods-cconverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cconverter.release.xcconfig"; path = "Pods/Target Support Files/Pods-cconverter/Pods-cconverter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +134,7 @@
 		1D54AA0E1F0AD46600391F89 /* cconverter */ = {
 			isa = PBXGroup;
 			children = (
+				1D54AA5D1F12318100391F89 /* DI */,
 				1D54AA4D1F11365C00391F89 /* ViewModels */,
 				1D54AA4C1F11365500391F89 /* Models */,
 				1D54AA491F11363000391F89 /* Services */,
@@ -173,6 +180,8 @@
 		1D54AA491F11363000391F89 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1D54AA5A1F12220800391F89 /* IKCCurrencyProvider.h */,
+				1D54AA5B1F12220800391F89 /* IKCCurrencyProvider.m */,
 				1D54AA571F11F8CF00391F89 /* IKCRateProvider.h */,
 				1D54AA581F11F8CF00391F89 /* IKCRateProvider.m */,
 			);
@@ -200,6 +209,15 @@
 			);
 			name = ViewModels;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		1D54AA5D1F12318100391F89 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				1D54AA5E1F1231C100391F89 /* IKCAssembly.h */,
+				1D54AA5F1F1231C100391F89 /* IKCAssembly.m */,
+			);
+			name = DI;
 			sourceTree = "<group>";
 		};
 		8B46A3E7C8C4F1B2907CADE5 /* Pods */ = {
@@ -398,10 +416,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D54AA141F0AD46600391F89 /* IKCAppDelegate.m in Sources */,
+				1D54AA601F1231C100391F89 /* IKCAssembly.m in Sources */,
 				1D54AA591F11F8CF00391F89 /* IKCRateProvider.m in Sources */,
 				1D54AA561F11425900391F89 /* IKCRate.m in Sources */,
 				1D54AA481F11351800391F89 /* IKCExchangeController.m in Sources */,
 				1D54AA111F0AD46600391F89 /* main.m in Sources */,
+				1D54AA5C1F12220800391F89 /* IKCCurrencyProvider.m in Sources */,
 				1D54AA501F113D3100391F89 /* IKCExchangeViewModel.m in Sources */,
 				1D54AA551F11425900391F89 /* IKCCurrency.m in Sources */,
 			);

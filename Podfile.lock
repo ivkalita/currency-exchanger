@@ -1,12 +1,22 @@
 PODS:
   - ReactiveObjC (3.0.0)
+  - Typhoon (4.0.2):
+    - Typhoon/DeallocNotifier (= 4.0.2)
+    - Typhoon/IntrospectionUtils (= 4.0.2)
+    - Typhoon/no-arc (= 4.0.2)
+  - Typhoon/DeallocNotifier (4.0.2)
+  - Typhoon/IntrospectionUtils (4.0.2)
+  - Typhoon/no-arc (4.0.2):
+    - Typhoon/IntrospectionUtils
 
 DEPENDENCIES:
   - ReactiveObjC (~> 3.0)
+  - Typhoon (~> 4.0)
 
 SPEC CHECKSUMS:
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  Typhoon: 05db9d33d798b90c202bf3f754275c03efe93297
 
-PODFILE CHECKSUM: 972c776a626088fb6d4c1451591b305fb4b78e79
+PODFILE CHECKSUM: 363b4286f37fe15e3970c54964b4244823358103
 
 COCOAPODS: 1.2.1
