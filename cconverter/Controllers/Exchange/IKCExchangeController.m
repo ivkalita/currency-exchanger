@@ -34,8 +34,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [RACObserve(_viewModel, converted) subscribeNext:^(NSNumber *value) {
-        [_outputField setText:value.stringValue];
+    [RACObserve(_viewModel, convertedString) subscribeNext:^(NSAttributedString *value) {
+        [_outputField setAttributedText:value];
+    }];
+
+    [RACObserve(_viewModel, amountString) subscribeNext:^(NSAttributedString *value) {
+        [_inputField setAttributedText:value];
     }];
 
     [RACObserve(_viewModel, sourceCurrencyCountry) subscribeNext:^(NSString *value) {
@@ -62,8 +66,8 @@
         [_targetCurrencyShortNameButton setTitle:value forState:UIControlStateNormal];
     }];
 
+    [self.inputField becomeFirstResponder];
 }
-
 
 - (IBAction)onSourceCurrencyTap:(id)sender {
     [self.currencyPurpose setPurpose:CurrencyPurposeSource];

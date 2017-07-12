@@ -6,19 +6,24 @@
 
 @interface IKCExchangeViewModel ()
 
-@property(nonatomic) IKCRate *rate;
-@property(nonatomic) IKCRateProvider *rateProvider;
-@property(nonatomic) IKCCurrencyProvider *currencyProvider;
+@property (nonatomic) IKCRate *rate;
+@property (strong, nonatomic) IKCRateProvider *rateProvider;
+@property (strong, nonatomic) IKCCurrencyProvider *currencyProvider;
 
-@property(nonatomic) NSNumber *converted;
+@property (nonatomic) NSAttributedString *amountString;
+@property (nonatomic) NSNumber *converted;
+@property (nonatomic) NSAttributedString *convertedString;
 
-@property(nonatomic) NSString *sourceCurrencyShortName;
-@property(nonatomic) NSString *sourceCurrencyFullName;
-@property(nonatomic) NSString *sourceCurrencyCountry;
+@property (nonatomic) NSString *sourceCurrencyShortName;
+@property (nonatomic) NSString *sourceCurrencyFullName;
+@property (nonatomic) NSString *sourceCurrencyCountry;
 
-@property(nonatomic) NSString *targetCurrencyShortName;
-@property(nonatomic) NSString *targetCurrencyFullName;
-@property(nonatomic) NSString *targetCurrencyCountry;
+@property (nonatomic) NSString *targetCurrencyShortName;
+@property (nonatomic) NSString *targetCurrencyFullName;
+@property (nonatomic) NSString *targetCurrencyCountry;
+
+- (void)setupAmountString:(NSNumber *)amount;
+- (void)setupConvertedString:(NSNumber *)converted;
 
 @end
 
@@ -43,19 +48,13 @@
     [RACObserve(self, rate) subscribeNext:^(IKCRate *rate) {
         [self setAmount:self.amount];
     }];
+    [RACObserve(self, converted) subscribeNext:^(NSNumber *converted) {
+        [self setupConvertedString:converted];
+    }];
 
     [self setAmount:@0];
 
     return self;
-}
-
-
-- (void)setAmount:(NSNumber *)amount {
-    _amount = amount;
-    NSNumber *newConverted = _rate == nil
-        ? @0
-        : @(_rate.rate.doubleValue * _amount.doubleValue);
-    [self setConverted:newConverted];
 }
 
 
@@ -80,6 +79,29 @@
     [self setTargetCurrencyCountry:target.country];
     [self setTargetCurrencyShortName:target.shortName];
     [self setTargetCurrencyFullName:target.fullName];
+}
+
+
+- (void)setAmount:(NSNumber *)amount {
+    _amount = amount;
+    NSNumber *newConverted = _rate == nil
+        ? @0
+        : @(_rate.rate.doubleValue * _amount.doubleValue);
+    [self setConverted:newConverted];
+}
+
+
+- (void)setupAmountString:(NSNumber *)amount {
+    amount = amount == nil ? @0 : amount;
+    NSString *str = [NSString stringWithFormat:@"%.02f", amount.doubleValue];
+    [self setAmountString:[[NSAttributedString alloc] initWithString:str]];
+}
+
+
+- (void)setupConvertedString:(NSNumber *)converted {
+    converted = converted == nil ? @0 : converted;
+    NSString *str = [NSString stringWithFormat:@"%.02f", converted.doubleValue];
+    [self setConvertedString:[[NSAttributedString alloc] initWithString:str]];
 }
 
 @end
