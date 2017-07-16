@@ -25,7 +25,6 @@
 
 @property (nonatomic) NSDateFormatter *formatter;
 
-- (void)setupAmountString:(NSNumber *)amount;
 - (void)setupConvertedString:(NSNumber *)converted;
 
 @end
@@ -34,11 +33,6 @@
 
 - (id)initWithRateProvider:(IKCRateProvider *)rateProvider currencyProvider:(IKCCurrencyProvider *)currencyProvider {
     self = [super init];
-
-    if (self == nil) {
-        return self;
-    }
-
 
     self.formatter = [NSDateFormatter new];
     [self.formatter setDateFormat:@"MM-dd-yyyy HH:mm"];

@@ -12,9 +12,6 @@
 
 - (id)initWithCurrency:(IKCCurrency *)currency selected:(BOOL)selected {
     self = [super init];
-    if (self == nil) {
-        return self;
-    }
 
     [self setCurrency:currency];
     [self setSelected:selected];

@@ -11,10 +11,6 @@
 - (id)init {
     self = [super init];
 
-    if (self == nil) {
-        return self;
-    }
-
     [self refreshCurrencies];
     [self setSource:self.currencies[0]];
     [self setTarget:self.currencies[1]];

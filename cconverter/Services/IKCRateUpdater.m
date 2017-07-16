@@ -43,7 +43,7 @@
             if (target.shortName != source.shortName) {
                 rate = [rawRates valueForKey:target.shortName];
             }
-            if (!rate) {
+            if (rate == nil) {
                 continue;
             }
             [IKCRate createInRealm:realm withValue:[[IKCRate alloc] initWithSource:source target:target rate:rate]];
