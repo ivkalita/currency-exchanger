@@ -56,6 +56,9 @@
     NSError *error;
     NSString *url = [NSString stringWithFormat:@"https://api.fixer.io/latest?base=%@", currency.shortName];
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    if (data == nil) {
+        return nil;
+    }
     NSMutableArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     if (error) {
         return nil;
