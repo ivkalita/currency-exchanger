@@ -27,9 +27,10 @@
 @implementation IKCExchangeController
 
 - (IBAction)inputEditingChanged:(id)sender {
-    NSNumberFormatter *nf = [NSNumberFormatter new];
-    [nf setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSNumber *newValue = [nf numberFromString:_inputField.text];
+    NSString *raw = _inputField.text;
+    NSString *withDots = [raw stringByReplacingOccurrencesOfString:@"," withString:@"."];
+    [_inputField setText:withDots];
+    NSNumber *newValue = @(withDots.floatValue);
     [_viewModel setAmount:newValue];
 }
 
@@ -94,4 +95,8 @@
 }
 
 
+- (IBAction)onCopyTap:(id)sender {
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    [pasteboard setString:_viewModel.convertedString.string];
+}
 @end

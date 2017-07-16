@@ -54,7 +54,7 @@
 
 - (NSMutableDictionary *)getCurrencyRates:(IKCCurrency *)currency {
     NSError *error;
-    NSString *url = [NSString stringWithFormat:@"https://api.fixer.io/latest"];
+    NSString *url = [NSString stringWithFormat:@"https://api.fixer.io/latest?base=%@", currency.shortName];
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     NSMutableArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     if (error) {

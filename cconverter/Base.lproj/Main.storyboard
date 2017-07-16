@@ -97,7 +97,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoB-C4-f8o" userLabel="Input Field">
-                                        <rect key="frame" x="15" y="50" width="295" height="44"/>
+                                        <rect key="frame" x="55" y="50" width="255" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="textColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="55"/>
@@ -129,6 +129,16 @@
                                         </state>
                                         <connections>
                                             <action selector="onTargetCurrencyTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsD-hm-wbQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oj3-kD-Gsj">
+                                        <rect key="frame" x="266" y="0.0" width="44" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Copy">
+                                            <color key="titleColor" red="0.97975665329999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCopyTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NrL-j5-5er"/>
                                         </connections>
                                     </button>
                                 </subviews>

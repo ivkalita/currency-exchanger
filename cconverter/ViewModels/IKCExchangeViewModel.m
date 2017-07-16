@@ -101,13 +101,6 @@
 }
 
 
-- (void)setupAmountString:(NSNumber *)amount {
-    amount = amount == nil ? @0 : amount;
-    NSString *str = [NSString stringWithFormat:@"%.02f", amount.doubleValue];
-    [self setAmountString:[[NSAttributedString alloc] initWithString:str]];
-}
-
-
 - (void)setupConvertedString:(NSNumber *)converted {
     converted = converted == nil ? @0 : converted;
     NSString *str = [NSString stringWithFormat:@"%.02f", converted.doubleValue];
