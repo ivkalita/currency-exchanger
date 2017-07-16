@@ -3,7 +3,10 @@
 @implementation IKCAssembly
 
 - (IKCAppDelegate *)appDelegate {
-    return [TyphoonDefinition withClass:[IKCAppDelegate class]];
+    return [TyphoonDefinition withClass:[IKCAppDelegate class] configuration:^(TyphoonDefinition *definition) {
+        SEL rateUpdaterSelector = NSSelectorFromString(@"rateUpdater");
+        [definition injectProperty:rateUpdaterSelector with:[self rateUpdater]];
+    }];
 }
 
 
@@ -64,6 +67,12 @@
 - (IKCCurrencyPurpose *)currencyPurpose {
     return [TyphoonDefinition withClass:[IKCCurrencyPurpose class] configuration:^(TyphoonDefinition *definition) {
         definition.scope = TyphoonScopeWeakSingleton;
+    }];
+}
+
+- (IKCRateUpdater *)rateUpdater {
+    return [TyphoonDefinition withClass:[IKCRateUpdater class] configuration:^(TyphoonDefinition *definition) {
+        definition.scope = TyphoonScopeSingleton;
     }];
 }
 

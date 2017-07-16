@@ -9,9 +9,10 @@
         return nil;
     }
 
-    self.source = source;
-    self.target = target;
-    self.rate = rate;
+    [self setSource:source];
+    [self setTarget:target];
+    [self setRate:rate];
+    [self setCreatedAt:[NSDate date]];
 
     return self;
 }

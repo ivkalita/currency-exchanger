@@ -5,6 +5,7 @@
 @property (nonatomic) NSNumber *amount;
 @property (nonatomic, readonly) NSAttributedString *amountString;
 @property (nonatomic, readonly) NSAttributedString *convertedString;
+@property (nonatomic, readonly) NSString *updatedAt;
 
 @property (nonatomic, readonly) NSString *sourceCurrencyShortName;
 @property (nonatomic, readonly) NSString *sourceCurrencyFullName;

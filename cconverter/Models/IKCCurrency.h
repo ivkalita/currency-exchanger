@@ -1,14 +1,13 @@
 #import <Foundation/Foundation.h>
+#import "Realm/Realm.h"
 
-@interface IKCCurrency : NSObject
+@interface IKCCurrency : RLMObject
 
-@property(nonatomic) NSInteger identifier;
 @property(nonatomic) NSString *shortName;
 @property(nonatomic) NSString *fullName;
 @property(nonatomic) NSString *country;
 
-- (id)initWithIdentifier:(NSInteger)identifier
-            shortName:(NSString *)shortName
+- (id)initWithShortName:(NSString *)shortName
             fullName:(NSString *)fullName
             country:(NSString *)country;
 

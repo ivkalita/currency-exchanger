@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "IKCRateUpdater.h"
+
 @interface IKCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) IKCRateUpdater *rateUpdater;
 
 @end
 

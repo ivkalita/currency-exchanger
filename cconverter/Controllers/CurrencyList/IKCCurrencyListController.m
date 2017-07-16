@@ -1,3 +1,5 @@
+#import "ReactiveObjC.h"
+
 #import "IKCCurrencyListController.h"
 #import "IKCCurrencyListViewModel.h"
 #import "IKCCurrencyListCellViewModel.h"
@@ -12,8 +14,9 @@
 
 @implementation IKCCurrencyListController
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self setTitle:_viewModel.title];
 }
 
 

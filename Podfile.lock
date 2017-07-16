@@ -1,5 +1,8 @@
 PODS:
   - ReactiveObjC (3.0.0)
+  - Realm (2.8.3):
+    - Realm/Headers (= 2.8.3)
+  - Realm/Headers (2.8.3)
   - Typhoon (4.0.2):
     - Typhoon/DeallocNotifier (= 4.0.2)
     - Typhoon/IntrospectionUtils (= 4.0.2)
@@ -11,12 +14,14 @@ PODS:
 
 DEPENDENCIES:
   - ReactiveObjC (~> 3.0)
+  - Realm
   - Typhoon (~> 4.0)
 
 SPEC CHECKSUMS:
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
   Typhoon: 05db9d33d798b90c202bf3f754275c03efe93297
 
-PODFILE CHECKSUM: 363b4286f37fe15e3970c54964b4244823358103
+PODFILE CHECKSUM: d6c303b9064622e379085efe56eb8b018fad8bb3
 
 COCOAPODS: 1.2.1

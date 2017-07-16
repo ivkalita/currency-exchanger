@@ -5,6 +5,8 @@
 
 @interface IKCCurrencyListViewModel : NSObject
 
+@property (nonatomic) NSString *title;
+
 - (NSInteger)numberOfRowsInSection;
 - (IKCCurrencyListCellViewModel *)cellViewModelAtIndex:(NSInteger)index;
 - (void)selectCurrencyAtIndex:(NSInteger)index;

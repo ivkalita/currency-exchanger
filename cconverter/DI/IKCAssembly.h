@@ -4,6 +4,7 @@
 #import "IKCCurrencyProvider.h"
 #import "IKCRateProvider.h"
 #import "IKCCurrencyPurpose.h"
+#import "IKCRateUpdater.h"
 
 #import "IKCExchangeViewModel.h"
 #import "IKCExchangeController.h"
@@ -21,5 +22,6 @@
 - (IKCCurrencyListViewModel *)currencyListViewModel;
 - (IKCCurrencyListController *)currencyListController;
 - (IKCCurrencyPurpose *)currencyPurpose;
+- (IKCRateUpdater *)rateUpdater;
 
 @end

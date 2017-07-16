@@ -15,25 +15,20 @@
         return self;
     }
 
-    NSArray *rawCurrencies = @[
-                               @[@"USD", @"USA Dollar", @"USA"],
-                               @[@"RUB", @"Russian Ruble", @"Russian Federation"],
-                               @[@"AUD", @"Australian Dollar", @"Australia"],
-                               @[@"BGN", @"Bulgarian Lev", @"Bulgaria"],
-                               @[@"EUR", @"Euro", @"Euro Member Countries"],
-                               @[@"GBP", @"British Pound", @"United Kingdom"]
-                            ];
-    NSMutableArray *currencies = [NSMutableArray new];
-    [rawCurrencies enumerateObjectsUsingBlock:^(NSArray *value, NSUInteger idx, BOOL * _Nonnull stop) {
-        IKCCurrency *currency = [[IKCCurrency alloc] initWithIdentifier:idx shortName:value[0] fullName:value[1] country:value[2]];
-        [currencies addObject:currency];
-    }];
-
-    [self setCurrencies:currencies];
+    [self refreshCurrencies];
     [self setSource:self.currencies[0]];
     [self setTarget:self.currencies[1]];
 
     return self;
+}
+
+- (void)refreshCurrencies {
+    RLMResults *results = [IKCCurrency allObjects];
+    NSMutableArray *currencies = [NSMutableArray new];
+    for (RLMObject *object in results) {
+        [currencies addObject:object];
+    }
+    [self setCurrencies:currencies];
 }
 
 @end

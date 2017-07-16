@@ -9,6 +9,7 @@
 @property (nonatomic) IKCRate *rate;
 @property (strong, nonatomic) IKCRateProvider *rateProvider;
 @property (strong, nonatomic) IKCCurrencyProvider *currencyProvider;
+@property (nonatomic) NSString *updatedAt;
 
 @property (nonatomic) NSAttributedString *amountString;
 @property (nonatomic) NSNumber *converted;
@@ -21,6 +22,8 @@
 @property (nonatomic) NSString *targetCurrencyShortName;
 @property (nonatomic) NSString *targetCurrencyFullName;
 @property (nonatomic) NSString *targetCurrencyCountry;
+
+@property (nonatomic) NSDateFormatter *formatter;
 
 - (void)setupAmountString:(NSNumber *)amount;
 - (void)setupConvertedString:(NSNumber *)converted;
@@ -35,6 +38,10 @@
     if (self == nil) {
         return self;
     }
+
+
+    self.formatter = [NSDateFormatter new];
+    [self.formatter setDateFormat:@"MM-dd-yyyy HH:mm"];
 
     [self setRateProvider:rateProvider];
     [self setCurrencyProvider:currencyProvider];
@@ -79,6 +86,9 @@
     [self setTargetCurrencyCountry:target.country];
     [self setTargetCurrencyShortName:target.shortName];
     [self setTargetCurrencyFullName:target.fullName];
+
+    NSString *dateString = [self.formatter stringFromDate:rate.createdAt];
+    [self setUpdatedAt:[NSString stringWithFormat:@"Rates are of %@", dateString]];
 }
 
 

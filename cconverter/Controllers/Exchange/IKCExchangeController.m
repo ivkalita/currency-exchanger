@@ -8,6 +8,7 @@
 
 @interface IKCExchangeController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *updatedAtLabel;
 @property (weak, nonatomic) IBOutlet UITextField *inputField;
 @property (weak, nonatomic) IBOutlet UILabel *sourceCurrencyCountryLabel;
 @property (weak, nonatomic) IBOutlet UIButton *sourceCurrencyShortNameButton;
@@ -26,7 +27,9 @@
 @implementation IKCExchangeController
 
 - (IBAction)inputEditingChanged:(id)sender {
-    NSNumber *newValue = @(_inputField.text.floatValue);
+    NSNumberFormatter *nf = [NSNumberFormatter new];
+    [nf setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber *newValue = [nf numberFromString:_inputField.text];
     [_viewModel setAmount:newValue];
 }
 
@@ -66,8 +69,13 @@
         [_targetCurrencyShortNameButton setTitle:value forState:UIControlStateNormal];
     }];
 
+    [RACObserve(_viewModel, updatedAt) subscribeNext:^(NSString *value) {
+        [_updatedAtLabel setText:value];
+    }];
+
     [self.inputField becomeFirstResponder];
 }
+
 
 - (IBAction)onSourceCurrencyTap:(id)sender {
     [self.currencyPurpose setPurpose:CurrencyPurposeSource];

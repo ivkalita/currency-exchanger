@@ -19,15 +19,20 @@
 - (id)initWithCurrencyProvider:(IKCCurrencyProvider *)currencyProvider currencyPurpose:(IKCCurrencyPurpose *)currencyPurpose {
     self = [super init];
 
-    if (self == nil) {
-        return self;
-    }
-
     [self setCurrencyProvider:currencyProvider];
     [self setCellsViewModels:[NSMutableDictionary new]];
     [self setCurrencyPurpose:currencyPurpose];
 
     return self;
+}
+
+
+- (void)setCurrencyPurpose:(IKCCurrencyPurpose *)currencyPurpose {
+    _currencyPurpose = currencyPurpose;
+    NSString *title = currencyPurpose.purpose == CurrencyPurposeSource
+        ? @"Source"
+        : @"Target";
+    [self setTitle:title];
 }
 
 

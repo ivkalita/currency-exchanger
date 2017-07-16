@@ -1,22 +1,34 @@
-//
-//  AppDelegate.m
-//  cconverter
-//
-//  Created by Ivan Kalita on 03.07.17.
-//  Copyright © 2017 Ivan Kalita. All rights reserved.
-//
+#import "Realm/Realm.h"
 
 #import "IKCAppDelegate.h"
 
 @interface IKCAppDelegate ()
+
 
 @end
 
 @implementation IKCAppDelegate
 
 
+- (id)init {
+    self = [super init];
+    [self openRealm];
+    return self;
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self.rateUpdater run];
     return YES;
+}
+
+- (void)openRealm {
+    NSURL *bundleRealmURL = [[NSBundle mainBundle] URLForResource:@"default" withExtension:@"realm"];
+    NSURL *defaultRealmURL = [RLMRealmConfiguration defaultConfiguration].fileURL;
+    NSFileManager *fs = [NSFileManager defaultManager];
+    if(![fs fileExistsAtPath:[defaultRealmURL path]]) {
+        [fs copyItemAtPath:[bundleRealmURL path] toPath:[defaultRealmURL path] error:nil];
+    }
 }
 
 
